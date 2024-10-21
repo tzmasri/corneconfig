@@ -13,6 +13,10 @@
     tapping-term-ms = <200>;
 };
 
+&mmv {
+    time-to-max-speed-ms = <50>;
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -43,7 +47,7 @@
 
 &kp F1     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7         &kp F8        &kp F9          &kp F10   &kp F11   &kp F12
 &trans	   &kp EXCL         &kp AT            &kp HASH          &kp DOLLAR   &kp PRCNT                    &kp CARET      &kp AMPS      &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp TILDE
-&trans     &trans           &trans            &trans            &trans       &trans                       &kp RC(TAB)    &kp MINUS     &kp EQUAL       &kp LBKT  &kp RBKT  &kp PIPE
+&trans     &trans           &mmv MOVE_UP      &mmv MOVE_DOWN    &mmv MOVE_LEFT &mmv MOVE_RIGHT            &kp RC(TAB)    &kp MINUS     &kp EQUAL       &kp LBKT  &kp RBKT  &kp PIPE
                                                              &trans &trans &trans                         &kp RC(RS(TAB)) &mkp LCLK &mkp RCLK    
                         >;
                 };
